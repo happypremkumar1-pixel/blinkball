@@ -1,0 +1,387 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #242843;
+  background: #f7f8fc;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: #242843;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-icon {
+  color: #6658e8;
+  margin-right: 7px;
+}
+
+.top-note {
+  color: #777d96;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 900px;
+  padding: 20px 24px 50px;
+  margin: auto;
+}
+
+.intro {
+  text-align: center;
+  margin: 20px 0 32px;
+}
+
+.eyebrow {
+  color: #6658e8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 16px 0;
+}
+
+h1 span {
+  color: #6658e8;
+}
+
+.subtitle {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #777d96;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.exercise-card {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #eceef5;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px #25284a0a;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.card-heading h2,
+.tips h2 {
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+.card-heading p {
+  margin: 0;
+  color: #858aa0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.live-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #6f7590;
+  white-space: nowrap;
+}
+
+.live-label span {
+  width: 7px;
+  height: 7px;
+  background: #35bb8a;
+  border-radius: 50%;
+}
+
+.play-area {
+  position: relative;
+  height: 300px;
+  margin: 24px 0;
+  overflow: hidden;
+  border: 1px solid #eeedff;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at center, #fff 0%, #f8f7ff 100%);
+}
+
+.guide {
+  position: absolute;
+  border: 1px dashed #e4e1fa;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.guide-one {
+  inset: 18% 20%;
+}
+
+.guide-two {
+  inset: 8% 35%;
+}
+
+.guide-three {
+  inset: 35% 8%;
+}
+
+.ball {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff 0 5%, #a8a0ff 18%, #6658e8 70%);
+  box-shadow: 0 0 0 8px #6658e81c, 0 6px 18px #6658e84d;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+
+.area-hint {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  text-align: center;
+  font-size: 11px;
+  color: #9a9bb2;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.timer-block {
+  margin-right: auto;
+}
+
+.control-label,
+.settings label {
+  display: block;
+  color: #858aa0;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timer-block strong {
+  font-size: 29px;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.settings select {
+  max-width: 145px;
+  padding: 10px 12px;
+  border: 1px solid #e4e5ef;
+  border-radius: 10px;
+  color: #333751;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 11px;
+  padding: 13px 19px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid #aaa2ff;
+  outline-offset: 3px;
+}
+
+.primary-btn {
+  flex: 1;
+  color: #fff;
+  background: #6658e8;
+}
+
+.primary-btn:hover {
+  background: #5344d0;
+}
+
+.secondary-btn {
+  color: #555a75;
+  background: #f0f1f8;
+}
+
+.status-message {
+  min-height: 20px;
+  margin: 17px 0 0;
+  text-align: center;
+  color: #777d96;
+  font-size: 12px;
+}
+
+.tips {
+  padding: 32px 4px 0;
+}
+
+.tips h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tip-grid article {
+  padding: 18px;
+  border: 1px solid #eceef5;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.tip-icon {
+  font-size: 22px;
+}
+
+.tip-grid h3 {
+  margin: 12px 0 7px;
+  font-size: 13px;
+}
+
+.tip-grid p,
+.disclaimer {
+  color: #858aa0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.tip-grid p {
+  margin: 0;
+}
+
+.disclaimer {
+  text-align: center;
+  margin: 20px auto 0;
+  max-width: 650px;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  color: #858aa0;
+  font-size: 12px;
+  border-top: 1px solid #eceef5;
+}
+
+footer span {
+  margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 20px 18px;
+  }
+
+  .top-note {
+    font-size: 11px;
+  }
+
+  .container {
+    padding: 12px 14px 36px;
+  }
+
+  .intro {
+    margin-top: 22px;
+  }
+
+  .exercise-card {
+    padding: 18px 14px;
+  }
+
+  .card-heading {
+    flex-direction: column;
+  }
+
+  .play-area {
+    height: 250px;
+  }
+
+  .controls {
+    gap: 18px 12px;
+  }
+
+  .timer-block {
+    width: 100%;
+  }
+
+  .settings {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .settings select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .tip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions button {
+    padding: 13px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

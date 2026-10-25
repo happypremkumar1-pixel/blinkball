@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>BlinkBall | A Little Break for Your Eyes</title>
+  <meta name="description" content="A simple, playful visual tracking exercise with a moving ball.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BlinkBall home">
+      <span class="brand-icon">●</span>
+      BlinkBall
+    </a>
+    <span class="top-note">A little moment for you</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY PAUSE</p>
+      <h1>Give your eyes a<br><span>little adventure.</span></h1>
+      <p class="subtitle">
+        Follow the ball. Relax your shoulders. Take a moment away
+        from your usual screen routine.
+      </p>
+    </section>
+
+    <section class="exercise-card" aria-label="Visual tracking exercise">
+      <div class="card-heading">
+        <div>
+          <h2>Follow the ball</h2>
+          <p>Keep your head comfortable and follow the dot with your eyes.</p>
+        </div>
+        <span class="live-label"><span></span> READY</span>
+      </div>
+
+      <div class="play-area" id="playArea">
+        <div class="guide guide-one"></div>
+        <div class="guide guide-two"></div>
+        <div class="guide guide-three"></div>
+        <div class="ball" id="ball" aria-label="Moving exercise ball"></div>
+        <p class="area-hint" id="areaHint">Your little adventure starts here</p>
+      </div>
+
+      <div class="controls">
+        <div class="timer-block">
+          <span class="control-label">SESSION TIME</span>
+          <strong id="timer">01:00</strong>
+        </div>
+
+        <div class="settings">
+          <label for="duration">Duration</label>
+          <select id="duration">
+            <option value="30">30 seconds</option>
+            <option value="60" selected>1 minute</option>
+            <option value="120">2 minutes</option>
+          </select>
+        </div>
+
+        <div class="settings">
+          <label for="speed">Ball speed</label>
+          <select id="speed">
+            <option value="slow" selected>Slow</option>
+            <option value="normal">Normal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="primary-btn">Start exercise</button>
+        <button id="resetBtn" class="secondary-btn">Reset</button>
+      </div>
+
+      <p class="status-message" id="status" role="status" aria-live="polite">
+        Ready when you are.
+      </p>
+    </section>
+
+    <section class="tips">
+      <h2>A gentle reminder</h2>
+      <div class="tip-grid">
+        <article>
+          <span class="tip-icon">🌿</span>
+          <h3>Stay comfortable</h3>
+          <p>Sit comfortably and breathe naturally.</p>
+        </article>
+        <article>
+          <span class="tip-icon">👀</span>
+          <h3>Move gently</h3>
+          <p>Follow only as far as feels comfortable.</p>
+        </article>
+        <article>
+          <span class="tip-icon">☁️</span>
+          <h3>Take a break</h3>
+          <p>Stop if you notice discomfort or dizziness.</p>
+        </article>
+      </div>
+      <p class="disclaimer">
+        BlinkBall is a general visual tracking activity, not a medical
+        treatment or a substitute for professional eye care.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Made for a calmer screen moment. <span>© BlinkBall</span>
+  </footer>
+</body>
+</html>
